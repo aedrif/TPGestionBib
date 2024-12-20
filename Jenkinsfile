@@ -40,7 +40,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Déploiement simulé réussi'
+                echo 'Déploiement simulé  réussi'
             }
         }
     }
