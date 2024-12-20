@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-            jdk 'Java17'
-            maven 'Maven3'
+            jdk 'jdk21'
+            maven 'maven'
     }
     environment {
             REPO_URL = 'git remote add origin https://github.com/aedrif/TPGestionBib.git'
@@ -17,7 +17,7 @@ pipeline {
          stage('Checkout from github') {
                      steps {
                          git branch: 'main',
-                         credentialsId: 'github',
+                         credentialsId: '9da44a34-3ff6-4fd2-986d-d0f2adedc6dd',
                          url: REPO_URL
                      }
          }
