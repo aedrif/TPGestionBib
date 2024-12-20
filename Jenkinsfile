@@ -17,7 +17,7 @@ pipeline {
          stage('Checkout from github') {
                      steps {
                          git branch: 'main',
-                         credentialsId: '9da44a34-3ff6-4fd2-986d-d0f2adedc6dd',
+                         credentialsId: 'github',
                          url: REPO_URL
                      }
          }
