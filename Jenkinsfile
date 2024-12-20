@@ -6,7 +6,6 @@ pipeline {
     }
     environment {
         REPO_URL = 'https://github.com/aedrif/TPGestionBib.git'
-        SONARQUBE_CREDENTIALS_ID = 'sonar'
     }
     stages {
         stage('Clean Workspace') {
@@ -33,7 +32,7 @@ pipeline {
         }
         stage('Quality Analysis') {
             steps {
-                withSonarQubeEnv(installationName: 'sonar', credentialsId: SONARQUBE_CREDENTIALS_ID) {
+                withSonarQubeEnv(installationName: 'sonar') {
                     bat 'mvn sonar:sonar'
                 }
             }
