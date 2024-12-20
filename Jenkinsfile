@@ -49,7 +49,7 @@ pipeline {
             mail(
                 to: 'edrifayoub36@gmail.com',
                 subject: 'Build Success',
-                body: 'Le build a été complété avec succès.'
+                body: 'Le build a été complté avec succès.'
             )
         }
         failure {
